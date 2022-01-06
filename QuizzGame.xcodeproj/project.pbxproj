@@ -13,6 +13,10 @@
 		E46A75502785F4F500E722AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E46A754E2785F4F500E722AC /* Main.storyboard */; };
 		E46A75522785F4F600E722AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E46A75512785F4F600E722AC /* Assets.xcassets */; };
 		E46A75552785F4F600E722AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E46A75532785F4F600E722AC /* LaunchScreen.storyboard */; };
+		E46A75602785F73E00E722AC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46A755F2785F73E00E722AC /* Game.swift */; };
+		E46A75622785F76400E722AC /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46A75612785F76400E722AC /* Question.swift */; };
+		E46A75642785F78300E722AC /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46A75632785F78300E722AC /* QuestionManager.swift */; };
+		E46A75662785F95F00E722AC /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46A75652785F95F00E722AC /* QuestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E46A75512785F4F600E722AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E46A75542785F4F600E722AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E46A75562785F4F600E722AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E46A755F2785F73E00E722AC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		E46A75612785F76400E722AC /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		E46A75632785F78300E722AC /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		E46A75652785F95F00E722AC /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		E46A75472785F4F500E722AC /* QuizzGame */ = {
 			isa = PBXGroup;
 			children = (
+				E46A755E2785F57300E722AC /* View */,
+				E46A755D2785F56600E722AC /* Controller */,
+				E46A755C2785F55F00E722AC /* Model */,
 				E46A75482785F4F500E722AC /* AppDelegate.swift */,
 				E46A754A2785F4F500E722AC /* SceneDelegate.swift */,
-				E46A754C2785F4F500E722AC /* ViewController.swift */,
-				E46A754E2785F4F500E722AC /* Main.storyboard */,
 				E46A75512785F4F600E722AC /* Assets.xcassets */,
 				E46A75532785F4F600E722AC /* LaunchScreen.storyboard */,
 				E46A75562785F4F600E722AC /* Info.plist */,
 			);
 			path = QuizzGame;
+			sourceTree = "<group>";
+		};
+		E46A755C2785F55F00E722AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E46A755F2785F73E00E722AC /* Game.swift */,
+				E46A75612785F76400E722AC /* Question.swift */,
+				E46A75632785F78300E722AC /* QuestionManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E46A755D2785F56600E722AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E46A754C2785F4F500E722AC /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E46A755E2785F57300E722AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E46A754E2785F4F500E722AC /* Main.storyboard */,
+				E46A75652785F95F00E722AC /* QuestionView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46A75622785F76400E722AC /* Question.swift in Sources */,
 				E46A754D2785F4F500E722AC /* ViewController.swift in Sources */,
 				E46A75492785F4F500E722AC /* AppDelegate.swift in Sources */,
+				E46A75662785F95F00E722AC /* QuestionView.swift in Sources */,
 				E46A754B2785F4F500E722AC /* SceneDelegate.swift in Sources */,
+				E46A75602785F73E00E722AC /* Game.swift in Sources */,
+				E46A75642785F78300E722AC /* QuestionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +335,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,6 +364,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
